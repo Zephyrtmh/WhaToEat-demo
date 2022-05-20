@@ -1,0 +1,341 @@
+:root {
+  --colour1: rgb(237, 119, 64);
+  --colour2: #d8d174;
+  --colour3: rgb(250, 198, 198);
+  --colour4: #b6c454;
+  --colour5: #91972a;
+}
+
+body {
+  background-color: var(--colour3);
+  overflow: hidden;
+  font-family: 'Cairo', sans-serif;
+  font-family: 'Righteous', cursive;
+}
+
+.navbar {
+  display: inline-flex;
+  align-items: center;
+  width: 340px;
+  justify-content: space-between;
+  height: 60px;
+  margin: 5vh 0 0 2vw;
+  z-index: 1;
+}
+
+.menu-img {
+  width: 4rem;
+  height: 62px;
+}
+
+.random-button {
+  width: 255px;
+  height: 72px;
+  border-radius: 20px;
+  text-align:center;
+  border-width: 0;
+  font-size: 36px;
+  background-color: rgb(237, 119, 64);
+  color:rgb(250, 198, 198);
+  padding: 0 12px 0 12px;
+  font-family: 'Changa', sans-serif;
+}
+
+.random-button:hover {
+  border: solid 3px rgb(250, 198, 198);
+}
+
+
+.menu-button {
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+}
+
+.sidebar-navbar {
+  display: inline-flex;
+}
+
+
+
+.dice-button {
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+}
+.dice-img {
+  z-index: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 30px;
+}
+.dice-img:hover {
+  animation: hop 0.15s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  /* 10% { transform: translate(-1px, -2px) rotate(-1deg); } */
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  /* 30% { transform: translate(3px, 2px) rotate(0deg); } */
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  /* 50% { transform: translate(-1px, 2px) rotate(-1deg); } */
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  /* 70% { transform: translate(3px, 1px) rotate(-1deg); } */
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  /* 90% { transform: translate(1px, 2px) rotate(0deg); } */
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes hop {
+  10% { transform: translate(0px, -7px)}
+  60% { transform: translate(0px,-8px)}
+  70% { transform: translate(0px,-8px)}
+  100% { transform: translate(0px,0px) }
+}
+
+
+
+/* .shoplist {
+  list-style-type: none;
+  height: 800px;
+  overflow-y: scroll;
+  
+} */
+
+
+.shoplist-extended::-webkit-scrollbar {
+  display: none;
+}
+
+.shoplist-hidden {
+  position: relative;
+  z-index: 1;
+  float: right;
+  list-style-type: none;
+  margin-right:-30vw;
+  transition-duration: 0.3s;
+}
+
+.shoplist-extended {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-right:1vw;
+  /* transform: translate(-2vw); */
+  transition-duration: 0.3s;
+  max-height: 100vh;
+  overflow-y: scroll;
+  z-index: 1;
+  min-width: 230px;
+}
+
+.shopName {
+  display: flex;
+  align-items: center;
+}
+
+.shoplist-list {
+  list-style-type: none;
+  padding-left: 0;
+  /* padding-right: 12px; */
+  
+}
+
+.shop-ratings {
+  text-align: justify;
+  background-color: transparent;
+}
+
+.shopgrid {
+  color: var(--colour1);
+  border-radius: 10px;
+  border: 0;
+  width: 20vw;
+  padding: 0 12px 0 12px;
+  height: 30vh;
+  overflow-y: hidden;
+  margin: 0 0 20px 0;
+  background-color: var(--colour3);
+}
+
+
+
+.shoplist-filter-container {
+  width: 100%;
+  align-self: flex-end;
+  margin-top: 1.5vh;
+  display:flex;
+  justify-content: space-around;
+  transition-delay: 4s;
+}
+
+.shoplist-filter-container-hidden {
+  margin-right: -30vw;
+  display: none;
+}
+
+
+
+.shoplist-filter-button-unselected {
+  border-radius: 30px;
+  background-color: var(--colour1);
+  border: 0;
+  /* padding: 15px; */
+  width: 30%;
+  height: 50px;
+  border: solid 3px;
+  color: none;
+}
+
+.shoplist-filter-button-selected {
+  border-color: rgb(226, 104, 104);
+}
+
+.shoplist-filter-button-unselected:hover {
+  border: solid 3px var(--colour3)
+}
+
+.map-display {
+  /* display: none; */
+  border: solid;
+  position:fixed; 
+  top:0; 
+  left:0; 
+  bottom:0; 
+  right:0; 
+  width:100%; 
+  height:100%; 
+  border:none; 
+  margin:0; 
+  padding:0; 
+  overflow:hidden; 
+  z-index:0;
+}
+
+.sidebar-extended {
+  position: relative;
+  z-index: 1;
+  background-color: var(--colour3);
+  height: 100vh;
+  overflow-y: scroll;
+  margin-left: 0px;
+  width: 25vw;
+  min-width: 250px;
+  transform: translate(0vw);
+  transition-duration: 0.3s;
+}
+
+.sidebar-extended::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-hidden {
+  position: relative;
+  margin-left: -30vw;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  background-color: var(--colour3);
+  height: 100vh;
+  max-width: 25vw;
+}
+
+#logo-img {
+  position: relative;
+  width:90%;
+  margin-top: 20px;
+}
+
+#logo-img-container {
+  display: flex;
+  justify-content: center;
+  /* margin: 10px; */
+}
+
+#filters-interface-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1vw 0 1vw;
+}
+
+#filter-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* border: 0 100px 0 100px; */
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.filter-title {
+  margin-left: 3%;
+}
+
+.filter-button-unselected {
+  border-radius: 30px;
+  /* padding: 15px; */
+  width: 30%;
+  height: 50px;
+  border: none;
+  color: none;
+  opacity: 70%;
+}
+
+.filter-button-selected {
+  border-radius: 30px;
+  /* padding: 15px 10%; */
+  width: 30%;
+  height: 50px;
+  border: 3px solid ;
+  color: rgb(226, 104, 104);
+}
+
+.filter-button-selected:hover {
+  border: solid 3px rgb(255, 157, 157);
+}
+.filter-button-unselected:hover {
+  border: solid 3px rgb(107, 107, 107);
+}
+
+.no-filter-button-unselected {
+  border-radius: 30px;
+  padding: 15px 6%;
+  border: solid 3px var(--colour3);
+  background-color: none;
+  color: var(--colour3);
+  /* width: 120px; */
+  align-self: flex-end;
+  margin-bottom: -10px;
+}
+
+.no-filter-button-selected {
+  border-radius: 30px;
+  padding: 15px 6%;
+  border: solid 3px;
+  color: var(--colour1);
+  /* width: 120px; */
+  align-self: flex-end;
+  margin-bottom: -10px;
+}
+
+.submit-button {
+  border-radius: 30px;
+  margin: 40px 10% 40px 10%;
+  padding: 15px 10%;
+  border: solid 3px;
+  color: none;
+  opacity: 70%;
+}
+
+.submit-button:hover {
+  border: solid 3px grey;
+}
+
+.info-window {
+  z-index: 2;
+}
