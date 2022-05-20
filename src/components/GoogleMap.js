@@ -44,7 +44,6 @@ function GoogleMap(props) {
         shop={shop} />
         
         );
-        this.
         return markers
     }
 
